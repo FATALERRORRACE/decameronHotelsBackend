@@ -11,6 +11,8 @@ Route::get('/menu', [MenuController::class, 'getAllMenuData']);
 // --- HOTELS ---
 Route::get('/hotels/list', [HotelsController::class, 'getAllHotelData']);
 Route::post('/hotels/new', [HotelsController::class, 'saveHotelData']);
+Route::post('/hotels/{id}/edit', [HotelsController::class, 'saveHotelData']);
+Route::get('/hotels/{id}/data', [HotelsController::class, 'getHotelData']);
 
 // --- ROOMS ---
 Route::post('/hotels/rooms/', [RoomController::class, 'storeRoomTypeRoomSize']);
