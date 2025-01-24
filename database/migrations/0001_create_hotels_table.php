@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('city');
-            $table->integer('nit');
+            $table->string('nit');
             $table->smallInteger('room_amount');
             $table->timestamps();
         });

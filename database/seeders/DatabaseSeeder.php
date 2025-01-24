@@ -14,13 +14,44 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        Hotels::factory()->create([
-            'name' => 'DECAMERON CARTAGENA',
-            'address' => 'CALLE 23 58-25',
-            'city' => 'Cartagena',
-            'nit' => 'Test User',
-            'roomAmount' => 'Test User',
-        ]);
-        
+        RoomSize::insert(
+            [
+                [
+                    'label' =>
+                ]
+            ]
+        );
+        RoomType::insert(
+            [
+                [
+                    'label' =>
+                ]
+            ]
+        );
+        Hotels::insert(
+            [
+                [
+                    'name' => 'DECAMERON CARTAGENA',
+                    'address' => 'CALLE 23 58-25',
+                    'city' => 'Cartagena',
+                    'nit' => '00000001',
+                    'room_amount' => 45
+                ],
+                [
+                    'name' => 'DECAMERON GALEON',
+                    'address' => 'CALLE 23 58-25',
+                    'city' => 'Santa Marta',
+                    'nit' => '00000002',
+                    'room_amount' => 35,
+                ],
+                [
+                    'name' => 'DECAMERON ISLEÑO',
+                    'address' => 'CALLE 23 58-25',
+                    'city' => 'San Andres',
+                    'nit' => '00000003',
+                    'room_amount' => 42,
+                ]
+            ]
+        );
     }
 }

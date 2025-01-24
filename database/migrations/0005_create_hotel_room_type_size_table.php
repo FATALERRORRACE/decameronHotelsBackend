@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         if (!Schema::hasTable('hotel_room_type_room_size'))
-        Schema::create('hotel_room_type_room_size', function (Blueprint $table) {
-            $table->unsignedInteger('hotel_id');
-            $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
-            $table->unsignedInteger('room_type_room_size_id');
-            $table->foreign('room_type_room_size_id')->references('id')->on('room_type')->onDelete('cascade');
-        });
+            Schema::create('hotel_room_type_room_size', function (Blueprint $table) {
+                $table->unsignedInteger('hotel_id');
+                $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
+                $table->unsignedInteger('room_type_room_size_id');
+                $table->foreign('room_type_room_size_id')->references('id')->on('room_type')->onDelete('cascade');
+            });
     }
 
     /**
