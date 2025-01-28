@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
                 [
                     'label' => "Sencilla",
                     "icon" => "RoomSize",
-                    "allowed_room_type"=>"3,5"      
+                    "allowed_room_type"=>"3,5"
                 ],[
                     'label' => "Doble",
                     "icon" => "RoomSize",
@@ -48,14 +48,17 @@ class DatabaseSeeder extends Seeder
         RoomType::insert(
             [
                 [
+                    'id' => 3,
                     'label' => "Estandar",
                     'icon' => "icon",
                 ],
                 [
+                    'id' => 4,
                     'label' => "Junior",
                     'icon' => "icon",
                 ],
                 [
+                    'id' => 5,
                     'label' => "Suite",
                     'icon' => "icon"
                 ]
