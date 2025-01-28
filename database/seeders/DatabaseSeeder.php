@@ -21,19 +21,19 @@ class DatabaseSeeder extends Seeder
                 [
                     'label' => "Sencilla",
                     "icon" => "RoomSize",
-                    "allowed_room_type "=>"3,5"      
+                    "allowed_room_type"=>"3,5"      
                 ],[
                     'label' => "Doble",
                     "icon" => "RoomSize",
-                    "allowed_room_type "=>"3,5"
+                    "allowed_room_type"=>"3,5"
                 ],[
                     'label' => "Triple",
                     "icon" => "RoomSize",
-                    "allowed_room_type "=>"4,5"
+                    "allowed_room_type"=>"4,5"
                 ],[
                     'label' => "Cuádruple",
                     "icon" => "RoomSize",
-                    "allowed_room_type "=>"4"
+                    "allowed_room_type"=>"4"
                 ]
             ]
         );
