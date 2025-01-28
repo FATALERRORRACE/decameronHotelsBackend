@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('label');
             $table->string('icon');
         });
+        if (!Schema::hasTable('menu'))
+        Schema::create('menu', function (Blueprint $table) {
+            $table->id();
+            $table->string('label');
+        });
     }
 
     /**
