@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Hotels;
 use App\Models\RoomSize;
 use App\Models\RoomType;
+use App\Models\Menu;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Menu::insert(
+            [
+                [
+                    'label' => "Registrar Nuevo Hotel"
+                ]
+            ]
+        );
 
         RoomSize::insert(
             [

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('allowed_room_type');
         });
     }
-
     /**
      * Reverse the migrations.
      */
