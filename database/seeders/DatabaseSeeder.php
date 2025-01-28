@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Hotels;
+use App\Models\RoomSize;
+use App\Models\RoomType;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,17 +19,41 @@ class DatabaseSeeder extends Seeder
         RoomSize::insert(
             [
                 [
-                    'label' =>
+                    'label' => "Sencilla",
+                    "icon" => "RoomSize",
+                    "allowed_room_type "=>"3,5"      
+                ],[
+                    'label' => "Doble",
+                    "icon" => "RoomSize",
+                    "allowed_room_type "=>"3,5"
+                ],[
+                    'label' => "Triple",
+                    "icon" => "RoomSize",
+                    "allowed_room_type "=>"4,5"
+                ],[
+                    'label' => "Cuádruple",
+                    "icon" => "RoomSize",
+                    "allowed_room_type "=>"4"
                 ]
             ]
         );
         RoomType::insert(
             [
                 [
-                    'label' =>
+                    'label' => "Estandar",
+                    'icon' => "icon",
+                ],
+                [
+                    'label' => "Junior",
+                    'icon' => "icon",
+                ],
+                [
+                    'label' => "Suite",
+                    'icon' => "icon"
                 ]
             ]
         );
+        
         Hotels::insert(
             [
                 [
