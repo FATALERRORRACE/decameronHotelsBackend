@@ -28,6 +28,9 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('room_type_room_size');
+        Schema::dropIfExists('hotel_room_type_room_size');
+        //Schema::dropIfExists('room_size');
         //Schema::dropIfExists('hotels');
     }
 };

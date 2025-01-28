@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('label');
             $table->string('icon');
+            $table->string('allowed_room_type');
         });
     }
 

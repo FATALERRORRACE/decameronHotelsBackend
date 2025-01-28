@@ -10,8 +10,8 @@ Route::get('/menu', [MenuController::class, 'getAllMenuData']);
 
 // --- HOTELS ---
 Route::get('/hotels/list', [HotelsController::class, 'getAllHotelData']);
-Route::post('/hotels/new', [HotelsController::class, 'saveHotelData']);
-Route::post('/hotels/{id}/edit', [HotelsController::class, 'saveHotelData']);
+Route::post('/hotels/new', [HotelsController::class, 'newHotelData']);
+Route::post('/hotels/{id}/edit', [HotelsController::class, 'editHotelData']);
 Route::get('/hotels/{id}/data', [HotelsController::class, 'getHotelData']);
 
 // --- ROOMS ---

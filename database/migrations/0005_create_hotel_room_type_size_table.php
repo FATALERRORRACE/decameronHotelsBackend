@@ -18,6 +18,7 @@ return new class extends Migration
                 $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
                 $table->unsignedInteger('room_type_room_size_id');
                 $table->foreign('room_type_room_size_id')->references('id')->on('room_type_room_size')->onDelete('cascade');
+                $table->unsignedInteger('room_amount');
             });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::dropIfExists('hotel_room_type_room_size');
+        Schema::dropIfExists('hotel_room_type_room_size');
     }
 };
