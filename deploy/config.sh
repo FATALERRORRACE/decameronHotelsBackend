@@ -1,4 +1,4 @@
-sudo yum install -y httpd php php-gd php-xml php-mbstring php-json php-zip php-pgsql php-pdo_pgsql git
+sudo yum install -y httpd php php-gd php-xml php-mbstring php-json php-zip php-pgsql php-pdo_pgsql git php8.1-fpm
 sudo mkdir -p /var/www/ && sudo chown -R www-data:www-data /var/www/
 sudo git clone https://github.com/FATALERRORRACE/decameronHotelsBackend.git /var/www/
 sudo wget https://getcomposer.org/composer.phar
@@ -26,7 +26,9 @@ GRANT ALL PRIVILEGES ON DATABASE decameron TO admin;
 # INSTALL NGINX
 sudo dnf install nginx
 sudo systemctl enable nginx.service
-sudo systemctl start nginx.service
+sudo systemctl restart nginx.service
+
+sudo cp /var/www/decameronHotelsBackend/deploy/decameron-backend.conf /etc/nginx/conf.d/decameron-backend.conf
 
 
 
@@ -54,8 +56,8 @@ sudo chmod -R 775 /var/www/decameronHotelsBackend/storage /var/www/decameronHote
 cd /var/www/decameronHotelsBackend
 composer install --no-dev --optimize-autoloader
 
-sudo cp /var/www/decameronHotelsBackend/deploy/decameron-backend.conf /etc/nginx/sites-available/decameron-backend.conf
-sudo ln -s /etc/nginx/sites-available/decameron-backend.conf /etc/nginx/sites-enabled/
+
+sudo ln -s /etc/nginx/sites-available/decameron-backend.conf /etc/nginx/conf.d/
 sudo systemctl restart nginx
 # Install postgre
 sudo apt install -y postgresql-common
