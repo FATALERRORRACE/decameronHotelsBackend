@@ -30,7 +30,7 @@ sudo systemctl restart nginx.service
 
 sudo cp /var/www/decameronHotelsBackend/deploy/decameron-backend.conf /etc/nginx/conf.d/decameron-backend.conf
 
-
+sudo cp /var/www/decameronHotelsBackend/deploy/decameron-backend.conf /usr/share/nginx/modules/decameron-backend.conf
 
 
 
