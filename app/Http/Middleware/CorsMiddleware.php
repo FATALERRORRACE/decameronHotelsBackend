@@ -1,5 +1,4 @@
 <?php
-// filepath: /path/to/your/app/Http/Middleware/CorsMiddleware.php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -20,6 +19,7 @@ class CorsMiddleware
         $response->headers->set('Access-Control-Allow-Origin', 'any');
         $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
         $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
         return $response;
     }
 }
